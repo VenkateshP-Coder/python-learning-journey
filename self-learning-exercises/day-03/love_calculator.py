@@ -30,6 +30,7 @@ love_count += combined.count('o')
 print(love_count)
 love_count += combined.count('v')
 print(love_count)
+print(love_count)
 love_count += combined.count('e')
 print(love_count)
 

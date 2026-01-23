@@ -32,6 +32,11 @@ Thumbs.db
 *.rar
 *.7z
 
+# JavaScript
+node_modules/
+package-lock.json
+*.log
+
 # Personal Notes (if you want to keep private)
 # personal-notes/
 # **/scratch.*
