@@ -48,3 +48,33 @@ console.log(typeof(h))
 
 let i = {name: "Alice", age: 30}
 console.log(typeof(i))
+
+//diff between var, let, const
+var x = 1
+let y = 2
+const z = 3
+
+x = 10 // var can be reassigned
+y = 20 // let can be reassigned
+//z = 30 // const cannot be reassigned, this will throw an error1
+console.log(x, y, z)
+
+//use const when variable value should not change
+const birthYear = 1990
+console.log("Birth Year:", birthYear)
+
+//use let when variable value can change
+let currentYear = 2024
+console.log("Current Year:", currentYear)
+currentYear = 2025
+console.log("Updated Current Year:", currentYear)
+
+//avoid using var to prevent scope issues
+//when to use var then?
+//use var in global scope or function scope when necessary
+function exampleFunction() {
+    var localVar = "I am local to this function"
+    console.log(localVar)
+}
+exampleFunction()
+//console.log(localVar) // This will throw an error since localVar is not defined outside the function
