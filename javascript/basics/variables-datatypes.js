@@ -68,7 +68,11 @@ let currentYear = 2024
 console.log("Current Year:", currentYear)
 currentYear = 2025
 console.log("Updated Current Year:", currentYear)
-
+//✅ Always prefer const - makes code more predictable
+//✅ Use let when you need to reassign
+//❌ Never use var - it's outdated and causes bugs
+//🔒 Block scope (let/const) is safer than function scope (var)
+//📦 const doesn't mean immutable - you can modify object/array contents
 //avoid using var to prevent scope issues
 //when to use var then?
 //use var in global scope or function scope when necessary

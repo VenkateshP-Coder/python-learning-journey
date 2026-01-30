@@ -5,9 +5,21 @@ if (flag) {
     console.log("The flag is false");
 }
 
-for (let i = 0; i < 5; i++) {
+//from 1 to 10, get multiples of 2 and 5
+let breaker = 0;
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0 && i % 5 === 0) {
     console.log("Iteration number:", i);
+    breaker++;
+    if (breaker === 5) {
+        console.log("Breaking the loop after 5 multiples of both 2 and 5.");
+        break;
+    }
+} else {
+    console.log("Not a multiple of both 2 and 5:", i);
 }
+}
+
 // Code executes IF condition is true
 let count = 3;
 while (count < 3) {
