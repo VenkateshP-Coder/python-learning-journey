@@ -79,11 +79,25 @@ console.log('Reversed fruits:', reversedFruits); //output: Reversed fruits: ['ch
 let sortedFruits = fruits.sort();
 console.log('Sorted fruits:', sortedFruits); //output: Sorted fruits: ['apple', 'banana', 'cherry']
 
+let numbers1 = [5, 2, 009, 1, 5, 6];
+let sortedNumbers = numbers1.sort();
+console.log('Sorted numbers (default):', sortedNumbers); //output: Sorted numbers (default): [1, 2, 5, 5, 6, 9]
+
+//sorting numbers correctly
+let sortedNumbers1 = numbers1.sort(function(a, b) {
+    return a - b;
+});
+console.log('Sorted numbers:', sortedNumbers); //output: Sorted numbers: [1, 2, 5, 5, 6, 9]
+
 //mapping an array
 let upperFruits = fruits.map(function(fruit) {
     return fruit.toUpperCase();
 });
 console.log('Uppercase fruits:', upperFruits); //output: Uppercase fruits: ['APPLE', 'BANANA', 'CHERRY']
+
+//other way of writing map using arrow function
+let lowerFruits = fruits.map(fruit => fruit.toLowerCase());
+console.log('Lowercase fruits:', lowerFruits); //output: Lowercase fruits: ['apple', 'banana', 'cherry']
 
 //need mapping example for numbers
 let numbersArray = [1, 2, 3, 4, 5];
@@ -148,6 +162,6 @@ console.log('Character array:', charArray); //output: Character array: ['h', 'e'
 //checking if a variable is an array
 console.log('Is fruits an array?', Array.isArray(fruits)); //output: Is fruits an array? true
 console.log('Is mixedArray an array?', Array.isArray(mixedArray)); //output: Is mixedArray an array? true
-console.log('Is pi an array?', Array.isArray(pi)); //output: Is pi an array? false
+//console.log('Is pi an array?', Array.isArray(pi)); //output: Is pi an array? false
 
 console.log("\n==== End of Demo ====");
