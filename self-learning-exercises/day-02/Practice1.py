@@ -56,3 +56,77 @@ a = 0
 for i in range(1,6):
     a = i + a
 print(a)
+
+#Exercise 1
+patient_id = 1001
+patient_name = "Ravi"
+age = 35
+is_active = True
+height = 5.9
+
+print(patient_id)
+print(patient_name)
+print(age)
+print(is_active)
+print(height)
+
+print(type(age))
+print(type(is_active))
+print(type(height))
+print(type(patient_id))
+print(type(patient_name))
+
+test_cases = ["Create Referral", "Update Referral", "Cancel Referral"]
+test_cases.append("Search Referral")
+print(test_cases)
+print(test_cases[1])
+for i in test_cases:
+    print(i)
+
+patient = {
+    "id": 1001,
+    "name":"Ravi",
+    "age":35,
+    "active":True
+}
+print(patient["name"])
+if patient["active"] == True:
+    print(patient["age"])
+else:
+    print(patient["id"])
+
+referral_status = "PENDING"
+
+if referral_status == "PENDING":
+    print("Awaiting approval")
+elif referral_status == "APPROVED":
+    print("Approved")
+else:
+    print("Rejected")
+
+record = (10001, "REF-2001")
+
+print(record)
+print(type(record))
+print(record[0])
+print(record[1])
+
+results = [
+    {"name": "Create Referral", "status": "PASS"},
+    {"name": "Update Referral", "status": "PASS"},
+    {"name": "Cancel Referral", "status": "FAIL"},
+    {"name": "Search Referral", "status": "PASS"}
+]
+print(results[2]["status"])
+passed = 0
+failed = 0
+for i in results:
+       if i["status"] == "PASS":
+            passed = passed + 1
+       else:
+            failed = failed + 1
+
+
+print(passed)
+print(failed)
+
